@@ -1,0 +1,13 @@
+.main_header {
+  grid-area: header;
+  background-color: #010010;
+}
+
+.header_logo {
+  display: inline-block;
+  width: 11rem;
+  height: 2rem;
+  margin: 1.3rem 2rem;
+  background: url("./../../logo.png") no-repeat;
+  background-size: contain;
+}

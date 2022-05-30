@@ -1,0 +1,14 @@
+.dialogsPage {
+  display: grid;
+  grid-template-columns: 3fr 9fr;
+  padding: 1rem;
+}
+
+.dialogsPage ul{
+  margin-top: 0;
+  padding: 0 1rem;
+}
+
+.messages {
+  padding: 0 1rem;
+}

@@ -1,0 +1,18 @@
+.item {
+  list-style: none;
+  grid-area: dialogs;
+}
+
+.item + .item {
+  margin-top: 30px;
+}
+
+.item a {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.item + .active a {
+  color: #010010;
+}

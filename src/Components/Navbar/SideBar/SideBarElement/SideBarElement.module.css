@@ -1,0 +1,21 @@
+.sideBarItem:hover img, .sideBarItem:active img{
+  border: solid 2px #fff;
+}
+
+.sideBarItem:hover a, .sideBarItem:active a{
+  color: #f0ee38;
+  line-height: normal;
+}
+
+.sideBarItem img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 3rem;
+    border: solid 2px #f0ee38;
+    transition: all 0.3s;
+}
+
+.sideBarItem a{
+  color: #fff;
+  transition: all 0.3s;
+}

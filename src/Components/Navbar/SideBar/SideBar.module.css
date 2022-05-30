@@ -1,0 +1,15 @@
+h3 {
+  color: #fff;
+  padding: 2rem 0 0 1rem;
+  border-top: 3px solid #f0ee38;
+}
+
+.sideBar_nav ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+}
+
