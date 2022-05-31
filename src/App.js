@@ -10,40 +10,33 @@ import Settings from "./Components/Settings/Settings";
 
 const App = (props) => {
   return (
-    <BrowserRouter>
-      <div className="page">
-        <div className="app-wrapper">
-          <Header />
-          <div className="navBar_wrapper">
-            <Navbar sideBarData={props.state.sideBar.sideBarData} />
-          </div>
-          <div className="main_content">
-            <Routes>
-              <Route
-                exact
-                path="/profile"
-                element={<Profile store={props.store} />}
-              />
-              <Route
-                exact
-                path="/dialogs"
-                element={
-                  <DialogsContainer
-                    store={props.store}
-                    // dialogsData={props.state.dialogs.dialogsData}
-                    // messagesData={props.state.dialogs.messagesData}
-                    // dispatch={props.dispatch}
-                  />
-                }
-              />
-              <Route exact path="/news" element={<News />} />
-              <Route exact path="/music" element={<Music />} />
-              <Route exact path="/settings" element={<Settings />} />
-            </Routes>
-          </div>
+    <div className="page">
+      <div className="app-wrapper">
+        <Header />
+        <div className="navBar_wrapper">
+          <Navbar />
+        </div>
+        <div className="main_content">
+          <Routes>
+            <Route
+              exact
+              path="/profile"
+              element={<Profile />}
+            />
+            <Route
+              exact
+              path="/dialogs"
+              element={
+                <DialogsContainer />
+              }
+            />
+            <Route exact path="/news" element={<News />} />
+            <Route exact path="/music" element={<Music />} />
+            <Route exact path="/settings" element={<Settings />} />
+          </Routes>
         </div>
       </div>
-    </BrowserRouter>
+    </div>
   );
 };
 
