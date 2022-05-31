@@ -1,6 +1,6 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import "./App.css";
-import Dialogs from "./Components/Dialogs/Dialogs";
+import DialogsContainer from "./Components/Dialogs/DialogsContainer";
 import Header from "./Components/Header/Header";
 import Music from "./Components/Music/Music";
 import Navbar from "./Components/Navbar/Navbar";
@@ -22,22 +22,17 @@ const App = (props) => {
               <Route
                 exact
                 path="/profile"
-                element={
-                  <Profile
-                    postsData={props.state.profile.postsData}
-                    newPostText={props.state.profile.newPostText}
-                    dispatch={props.dispatch}
-                  />
-                }
+                element={<Profile store={props.store} />}
               />
               <Route
                 exact
                 path="/dialogs"
                 element={
-                  <Dialogs
-                    dialogsData={props.state.dialogs.dialogsData}
-                    messagesData={props.state.dialogs.messagesData}
-                    dispatch={props.dispatch}
+                  <DialogsContainer
+                    store={props.store}
+                    // dialogsData={props.state.dialogs.dialogsData}
+                    // messagesData={props.state.dialogs.messagesData}
+                    // dispatch={props.dispatch}
                   />
                 }
               />
