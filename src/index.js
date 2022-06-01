@@ -5,8 +5,8 @@ import App from "./App";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import store from "./redux/redux-store";
-import StoreContext from "./StoreContext";
 import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
 
 let rerenderEntireTree = (state) => {
   // const root = ReactDOMClient.createRoot(document.getElementById("root"));
@@ -19,13 +19,14 @@ let rerenderEntireTree = (state) => {
 
   ReactDOM.render(
     <BrowserRouter>
-      <StoreContext.Provider value={store}>
+      <Provider store = {store}>
         <App />
-      </StoreContext.Provider>
+      </Provider>
     </BrowserRouter>,
     document.getElementById("root")
   );
 };
+
 
 rerenderEntireTree(store.getState());
 

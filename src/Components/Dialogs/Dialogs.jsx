@@ -14,7 +14,7 @@ const Dialogs = (props) => {
   ));
 
   let onSendMessage = () =>{
-    props.store.sendMessage();
+    props.sendMessage();
   }  
 
   let onNewMessage = (e) => {
