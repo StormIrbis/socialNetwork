@@ -3,23 +3,24 @@ import styles from "./Dialogs.module.css";
 import Message from "./Message/Message";
 import DialogItem from "./DialogItem/DialogItem";
 
-
 const Dialogs = (props) => {
   let dialogsElements = props.dialogsData.map((dialog) => (
-    <DialogItem name={dialog.name} id={dialog.id} />
+    <DialogItem name={dialog.name} key={dialog.id} id={dialog.id} />
   ));
 
   let messagesElements = props.messagesData.map((message) => (
-    <Message messageText={message.messageText} />
+    <Message messageText={message.messageText} key={message.id} id={message.id} />
   ));
 
-  let onSendMessage = () =>{
-    props.sendMessage();
-  }  
+  let newMessageText = React.createRef();
 
-  let onNewMessage = (e) => {
-    let text = e.target.value;
-    props.newMessage(text);
+  let onSendMessage = () => {
+    props.sendMessage();
+  };
+
+  let onNewMessage = () => {
+    let text = newMessageText.current.value;
+    props.updateNewMessageText(text);
   };
 
   return (
@@ -30,6 +31,7 @@ const Dialogs = (props) => {
         <textarea
           onChange={onNewMessage}
           name="newMessage"
+          ref={newMessageText}
           id="newMessage"
           placeholder="Enter your message"
           cols="30"
