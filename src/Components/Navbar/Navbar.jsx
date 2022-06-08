@@ -57,6 +57,16 @@ const Navbar = (props) => {
               Settings
             </NavLink>
           </li>
+          <li className={styles.item}>
+            <NavLink
+              to="/users"
+              className={({ isActive }) =>
+                isActive ? styles.active : undefined
+              }
+            >
+              Users
+            </NavLink>
+          </li>
         </ul>
       </nav>
 

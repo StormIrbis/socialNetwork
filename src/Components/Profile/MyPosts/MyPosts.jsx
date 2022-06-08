@@ -30,6 +30,7 @@ const MyPosts = (props) => {
             id="addPost"
             cols="30"
             rows="10"
+            placeholder="Enter your message"
             value={props.newPostText}
           />
         </div>

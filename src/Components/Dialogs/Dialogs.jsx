@@ -9,7 +9,11 @@ const Dialogs = (props) => {
   ));
 
   let messagesElements = props.messagesData.map((message) => (
-    <Message messageText={message.messageText} key={message.id} id={message.id} />
+    <Message
+      messageText={message.messageText}
+      key={message.id}
+      id={message.id}
+    />
   ));
 
   let newMessageText = React.createRef();
@@ -30,13 +34,14 @@ const Dialogs = (props) => {
       <div>
         <textarea
           onChange={onNewMessage}
-          name="newMessage"
           ref={newMessageText}
+          value={props.newMessageText}
+          name="newMessage"
           id="newMessage"
           placeholder="Enter your message"
           cols="30"
           rows="10"
-        ></textarea>
+        />
       </div>
       <div>
         <button onClick={onSendMessage}>Send</button>
