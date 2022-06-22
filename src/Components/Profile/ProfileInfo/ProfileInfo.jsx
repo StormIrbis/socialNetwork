@@ -4,7 +4,7 @@ const ProfileInfo = (props) => {
   return (
     <div>
       <div>
-        <img
+        <img className={styles.profileBg}
           src="https://marketinginsidergroup.com/wp-content/uploads/2021/08/iStock-1056779942.jpg"
           alt=""
         />
