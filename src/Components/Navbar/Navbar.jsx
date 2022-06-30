@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import styles from "./Navbar.module.css";
 import SideBar from "./SideBar/SideBar";
 
@@ -8,64 +8,64 @@ const Navbar = (props) => {
       <nav className={styles.main_nav}>
         <ul>
           <li className={styles.item}>
-            <NavLink
+            <Link
               to="/profile"
               className={({ isActive }) =>
                 isActive ? styles.active : undefined
               }
             >
               Profile
-            </NavLink>
+            </Link>
           </li>
           <li className={styles.item}>
-            <NavLink
+            <Link
               to="/dialogs"
               className={({ isActive }) =>
                 isActive ? styles.active : undefined
               }
             >
               Messages
-            </NavLink>
+            </Link>
           </li>
           <li className={styles.item}>
-            <NavLink
+            <Link
               to="/news"
               className={({ isActive }) =>
                 isActive ? styles.active : undefined
               }
             >
               News
-            </NavLink>
+            </Link>
           </li>
           <li className={styles.item}>
-            <NavLink
+            <Link
               to="/music"
               className={({ isActive }) =>
                 isActive ? styles.active : undefined
               }
             >
               Music
-            </NavLink>
+            </Link>
           </li>
           <li className={styles.item}>
-            <NavLink
+            <Link
               to="/settings"
               className={({ isActive }) =>
                 isActive ? styles.active : undefined
               }
             >
               Settings
-            </NavLink>
+            </Link>
           </li>
           <li className={styles.item}>
-            <NavLink
+            <Link
               to="/users"
               className={({ isActive }) =>
                 isActive ? styles.active : undefined
               }
             >
               Users
-            </NavLink>
+            </Link>
           </li>
         </ul>
       </nav>

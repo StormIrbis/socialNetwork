@@ -1,15 +1,24 @@
 import styles from "./ProfileInfo.module.css";
+import profileBG from "./../../../assets/images/prifile_bg-01.jpg";
+import Preloader from "../../Common/Preloader/Preloader";
 
 const ProfileInfo = (props) => {
+  if(!props.profile){
+    return <Preloader />
+  }
+
   return (
     <div>
       <div>
         <img className={styles.profileBg}
-          src="https://marketinginsidergroup.com/wp-content/uploads/2021/08/iStock-1056779942.jpg"
+          src={profileBG}
           alt=""
         />
       </div>
-      <div className={styles.descriptionBlock}>ava + description</div>
+      <div className={styles.descriptionBlock}>
+        <img src={props.profile.photos.large} />     
+        ava + description
+        </div>
     </div>
   );
 };

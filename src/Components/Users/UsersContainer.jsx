@@ -86,9 +86,16 @@ let mapDispatchToProps = (dispatch) => {
       dispatch(setTotalUsersCountAC(totalCount));
     },
     toggleIsFetching: (isFetching) => {
-      dispatch(toggleIsFetchingAC(isFetching))
-    }
+      dispatch(toggleIsFetchingAC(isFetching));
+    },
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(UsersContainer);
+export default connect(mapStateToProps, {
+  follow: followAC,
+  unfollow: unfollowAC,
+  setUsers: setUsersAC,
+  setCurrentPage: setCurrentPageAC,
+  setTotalUsersCount: setTotalUsersCountAC,
+  toggleIsFetching: toggleIsFetchingAC,
+})(UsersContainer);

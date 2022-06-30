@@ -1,13 +1,14 @@
-import { Routes, Route } from "react-router-dom";
+import {Routes, Route } from "react-router-dom";
 import "./App.css";
 import DialogsContainer from "./Components/Dialogs/DialogsContainer";
 import Header from "./Components/Header/Header";
 import Music from "./Components/Music/Music";
 import Navbar from "./Components/Navbar/Navbar";
 import News from "./Components/News/News";
-import Profile from "./Components/Profile/Profile";
+import ProfileContainer from "./Components/Profile/ProfileContainer";
 import Settings from "./Components/Settings/Settings";
 import UsersContainer from "./Components/Users/UsersContainer";
+import { useParams } from 'react-router-dom';
 
 const App = (props) => {
   return (
@@ -19,7 +20,7 @@ const App = (props) => {
         </div>
         <div className="main_content">
           <Routes>
-            <Route exact path="/profile" element={<Profile />} />
+            <Route exact path="/profile/:id" element={<ProfileContainer />} />
             <Route exact path="/dialogs" element={<DialogsContainer />} />
             <Route exact path="/news" element={<News />} />
             <Route exact path="/music" element={<Music />} />
