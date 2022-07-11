@@ -8,7 +8,6 @@ import News from "./Components/News/News";
 import ProfileContainer from "./Components/Profile/ProfileContainer";
 import Settings from "./Components/Settings/Settings";
 import UsersContainer from "./Components/Users/UsersContainer";
-import { useParams } from 'react-router-dom';
 
 const App = (props) => {
   return (
@@ -20,7 +19,10 @@ const App = (props) => {
         </div>
         <div className="main_content">
           <Routes>
-            <Route exact path="/profile/:id" element={<ProfileContainer />} />
+            <Route path="/profile/" >
+              <Route path=":id" element={<ProfileContainer />} />
+              <Route path="" element={<ProfileContainer />} />
+            </Route>
             <Route exact path="/dialogs" element={<DialogsContainer />} />
             <Route exact path="/news" element={<News />} />
             <Route exact path="/music" element={<Music />} />
