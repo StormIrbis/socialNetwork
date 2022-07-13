@@ -9,7 +9,6 @@ let initialState = {
   ],
   newPostText: "Hello, enter your text!!!",
   profile: null,
-  id: 1
 };
 
 const profileReducer = (state = initialState, action) => {

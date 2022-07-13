@@ -11,3 +11,19 @@
   background: url("./../../logo.png") no-repeat;
   background-size: contain;
 }
+
+.loginBlock{
+  float: right;
+  margin: 30px;
+  font-weight: bold;
+  color:#ffffff;
+}
+
+.loginBlock a{
+  color:#0088cc;
+  transition: all 0.3s;
+}
+
+.loginBlock a:hover{
+  color:#ffffff;
+}

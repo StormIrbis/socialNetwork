@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { setUserProfile } from "../../redux/profile-reducer";
 import { useParams } from "react-router-dom";
 
-function ProfileContainer(props) {
+const ProfileContainer = (props) => {
   let { id } = useParams();
   
   if (!id) {
